@@ -1,0 +1,101 @@
+/* ==========================================
+   RESET & BASE STYLES
+   ========================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  background-color: #f1f5f9; /* Background abu-abu terang yang lembut */
+  color: #0f172a; /* Warna teks charcoal gelap yang premium */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Agar konten selalu pas di tengah vertikal layar */
+  padding: 20px;
+}
+
+/* ==========================================
+   WIDGET / CARD CONTAINER (#root)
+   ========================================== */
+#root {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow:
+    0 10px 25px -5px rgba(0, 0, 0, 0.05),
+    0 8px 10px -6px rgba(0, 0, 0, 0.05); /* Shadow halus ala aplikasi modern */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 380px; /* Lebar maksimal card produk */
+  text-align: center;
+}
+
+/* 1. Styling untuk Info Cart (Teks Pertama) */
+#root p:nth-of-type(1) {
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  color: #4f46e5; /* Ungu Indigo modern */
+  background-color: #e0e7ff; /* Background badge ungu transparan */
+  padding: 6px 16px;
+  border-radius: 9999px; /* Membuat bentuk pill/kapsul */
+  margin-bottom: 8px;
+}
+
+/* 2. Styling Nama Produk */
+#root p:nth-of-type(2) {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-top: 4px;
+}
+
+/* 3. Styling Harga Produk */
+#root p:nth-of-type(3) {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #059669; /* Hijau Emerald segar khas e-commerce */
+  margin-bottom: 8px;
+}
+
+/* 4. Styling Gambar Produk */
+#root img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover; /* Agar gambar tidak gepeng */
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 12px;
+}
+
+/* 5. Styling Tombol (Button) */
+#root button {
+  width: 100%;
+  padding: 12px;
+  background-color: #0f172a; /* Hitam elegan */
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Animasi mikro saat tombol di-hover atau ditekan */
+#root button:hover {
+  background-color: #1e293b;
+  transform: translateY(-1px);
+}
+
+#root button:active {
+  transform: translateY(1px);
+}
